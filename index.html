@@ -37,7 +37,7 @@
             opacity: .8;
         }
     </style>
-    <script defer src="main.js"></script>
+    <script defer src="lua.js"></script>
 </head>
 <body>
     <div class="page container content">
@@ -53,16 +53,16 @@
                         <div class="column is-three-quarters">
                             <label for="" class="label">Objet</label>
                             <div class="control">
-                                <input type="text" name="objet" class="input objet">
+                                <input type="text" name="label" class="input objet">
                             </div>
                         </div>
                         <div class="column is-one-quarter">
                             <label for="" class="label">Valise</label>
                             <div class="select">
                                 <select name="valise" id="" class="valise">
-                                    <option value="de soute">De soute</option>
-                                    <option value="de cabine">De cabine</option>
-                                    <option value="à main">À main</option>
+                                    <option value="soute">De soute</option>
+                                    <option value="cabine">De cabine</option>
+                                    <option value="main">À main</option>
                                 </select>
                             </div>
                         </div>
@@ -76,17 +76,18 @@
             <!-- tabstitle -->
             <div class="tabs is-boxed">
                 <ul>
-                  <li class="" data-tab="1"><a>Valise de cabine</a></li>
-                  <li class="is-active" data-tab="2"><a>Valise de soute</a></li>
-                  <li data-tab="3"><a>Sac à main</a></li>
+                  <li class="" data-tab="cabine"><a>Valise de cabine&nbsp;(<span class="reste">0</span>)</a></li>
+                  <li class="is-active" data-tab="soute"><a>Valise de soute&nbsp;(<span class="reste">0</span>)</a></li>
+                  <li data-tab="main"><a>Sac à main&nbsp;(<span class="reste">0</span>)</a></li>
                 </ul>
              </div>
              <!-- end tabstitle -->
              <!-- tabscontent -->
              <!-- tabcontent 1 -->
             <div class="tabs-contents">
-                <div id="valise-cabine" class="valise-cabine tab-content" data-tabcontent="1">
+                <div id="cabine" class="valise-cabine tab-content" data-tabcontent="cabine">
                     <ul class="list">
+                       <!--
                         <li class="list-item todo columns is-active">
                             <div class="column is-three-quarters">test</div>
                             <div class="column"><button class="button">x</button></div>
@@ -103,17 +104,18 @@
                             <div class="column is-three-quarters">test 3</div>
                             <div class="column"><button class="button">x</button></div>
                         </li>
+                        -->
                     </ul>
                 </div>
                 <!--end tabcontent 1-->
                 <!-- tabcontent 2 -->
-                <div id="valise-soute" class="valise-soute tab-content active" data-tabcontent="2">
-                    soute
+                <div id="soute" class="valise-soute tab-content active" data-tabcontent="soute">
+                    <ul class="list"></ul>
                 </div>
                 <!-- end tabcontent 2-->
                 <!--  tabcontent 3-->
-                <div id="sac-a-main" class="sac-a-main tab-content" data-tabcontent="3">
-                    Sac à main
+                <div id="main" class="sac-a-main tab-content" data-tabcontent="main">
+                    <ul class="list"></ul>
                 </div>
                 <!--end tabcontent 3-->
             </div><!--end tabs-contents-->
