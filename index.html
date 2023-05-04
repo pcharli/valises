@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les valises</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css">
+    <style>
+        .tab-content {
+            border: 1px solid #dbdbdb;
+            display: none;
+            margin-top: -25px;
+            padding: 1rem;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .select, .input {
+            color: black;
+        }
+        .notification {
+            margin-top: -100px;
+            transition: all 1s;
+            position: absolute;
+            z-index:7;
+            width: 100%;
+        }
+        .notification.active {
+            margin-top: 134px;
+        }
+        .todo {
+            cursor: pointer;
+            background-color: silver;
+        }
+        .todo:hover {
+            opacity: .8;
+        }
+    </style>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="page container content">
+        <div class="notification is-danger">
+            <button class="delete"></button>
+            Objet supprimé !
+          </div>
+        <header class="hero is-primary">
+            <div class="hero-body">
+                <h1 class="title is-primary">Je mets dans ma valise</h1>
+                <form action="" class="form">
+                    <div class="columns">
+                        <div class="column is-three-quarters">
+                            <label for="" class="label">Objet</label>
+                            <div class="control">
+                                <input type="text" name="objet" class="input objet">
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter">
+                            <label for="" class="label">Valise</label>
+                            <div class="select">
+                                <select name="valise" id="" class="valise">
+                                    <option value="de soute">De soute</option>
+                                    <option value="de cabine">De cabine</option>
+                                    <option value="à main">À main</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div><!-- .columns-->
+                    <button class="button">Ajouter</button>
+                </form>
+            </div>
+        </header>
+        <main class="section">
+            <h2 class="title">État</h2>
+            <!-- tabstitle -->
+            <div class="tabs is-boxed">
+                <ul>
+                  <li class="" data-tab="1"><a>Valise de cabine</a></li>
+                  <li class="is-active" data-tab="2"><a>Valise de soute</a></li>
+                  <li data-tab="3"><a>Sac à main</a></li>
+                </ul>
+             </div>
+             <!-- end tabstitle -->
+             <!-- tabscontent -->
+             <!-- tabcontent 1 -->
+            <div class="tabs-contents">
+                <div id="valise-cabine" class="valise-cabine tab-content" data-tabcontent="1">
+                    <ul class="list">
+                        <li class="list-item todo columns is-active">
+                            <div class="column is-three-quarters">test</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        <li class="list-item todo columns is-active">
+                            <div class="column is-three-quarters">test 2</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        <li class="list-item todo columns is-active">
+                            <div class="column is-three-quarters">test 3</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        <li class="list-item todo columns">
+                            <div class="column is-three-quarters">test 3</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                    </ul>
+                </div>
+                <!--end tabcontent 1-->
+                <!-- tabcontent 2 -->
+                <div id="valise-soute" class="valise-soute tab-content active" data-tabcontent="2">
+                    soute
+                </div>
+                <!-- end tabcontent 2-->
+                <!--  tabcontent 3-->
+                <div id="sac-a-main" class="sac-a-main tab-content" data-tabcontent="3">
+                    Sac à main
+                </div>
+                <!--end tabcontent 3-->
+            </div><!--end tabs-contents-->
+        </main>
+        <footer class="footer hero"><p class="content has-text-centered">© P. Charlier - 2023</p></footer>
+    </div>
+</body>
+</html>
