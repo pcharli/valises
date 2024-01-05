@@ -49,6 +49,7 @@ $form.addEventListener('submit', (e) => {
       new_item.key = new Date().getTime()
       //ajout dans l'array
       objects.push(new_item) 
+      $form.reset()
 
      //ajout de l'objet dans la bonne valise
      document.querySelector(`#${new_item.valise} ul`).innerHTML += `
