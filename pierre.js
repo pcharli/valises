@@ -168,10 +168,12 @@ function initDragDelete () {
             if(e.target.classList.contains("button")) {
                 //alert(e.target.parentNode.parentNode.dataset.id)
                 //delete dans l'array sur base de la key
-                const pos = objects.findIndex(i => i.key == e.target.parentNode.parentNode.dataset.id)
-                objects.splice(pos,1)
-                //delete de l'élément "li"
-                e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode)
+                if(confirm("Sûr ?")){
+                    const pos = objects.findIndex(i => i.key == e.target.parentNode.parentNode.dataset.id)
+                    objects.splice(pos,1)
+                    //delete de l'élément "li"
+                    e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode)
+                }
             // mise à jour de l'état (mise ou retrait physique de l'objet de la valise)
             } else {
                 //alert(e.target.parentNode.dataset.id)
