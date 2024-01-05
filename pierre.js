@@ -50,7 +50,7 @@ $form.addEventListener('submit', (e) => {
       //ajout dans l'array
       objects.push(new_item) 
       $form.reset()
-      $form.input[0].focus()
+      $form.querySelector('.objet').focus()
 
      //ajout de l'objet dans la bonne valise
      document.querySelector(`#${new_item.valise} ul`).innerHTML += `
