@@ -1,0 +1,46 @@
+Adulte
+Un jean adulte  = 800 à 1000 g
+
+Un pantalon coton adulte  = 500 g
+
+Un pantalon jogging adulte  = 350 g  
+
+Une  chemise ou un chemisier  = 200 g
+
+Un t-shirt L  = 150 g
+
+Une robe légère  = 150 g
+
+Une paire de chaussettes  = 20 g
+
+Un sweat-shirt  = 250 g
+
+Un pyjama coton adulte  = 250 g
+
+Enfant
+Un pull enfant  = 50 g
+
+un pyjama éponge enfant  = 100 g
+
+Un pantalon coton enfant  = 120 g
+
+LINGE
+Un drap de lit 1 place  = 450 g
+
+Un drap de lit 2 places  = 800 g
+
+Une housse de couette  = 1500 g
+
+Une taie d'oreiller  =  200 g
+
+Une nappe  = 250 g
+
+Un torchon  = 100 g
+
+Un grand peignoir de bain  = 1500 g
+
+Un petit peignoir de bain  = 1200 g
+
+Une grande serviette éponge = 700 g
+
+Une petite serviette éponge   = 300 g

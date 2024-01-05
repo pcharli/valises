@@ -36,11 +36,8 @@
         .todo:hover {
             opacity: .8;
         }
-        .drag-active {
-            background-color: red;
-        }
     </style>
-    <script defer src="pierre.js"></script>
+    <script defer src="main-drop.js"></script>
 </head>
 <body>
     <div class="page container content">
@@ -63,7 +60,9 @@
                             <label for="" class="label">Valise</label>
                             <div class="select">
                                 <select name="valise" id="" class="valise">
-                                    
+                                    <option value="soute">De soute</option>
+                                    <option value="cabine">De cabine</option>
+                                    <option value="main">À main</option>
                                 </select>
                             </div>
                         </div>
@@ -77,14 +76,48 @@
             <!-- tabstitle -->
             <div class="tabs is-boxed">
                 <ul>
-                  
+                  <li class="" data-tab="cabine"><a>Valise de cabine&nbsp;(<span class="reste">0</span>)</a></li>
+                  <li class="is-active" data-tab="soute"><a>Valise de soute&nbsp;(<span class="reste">0</span>)</a></li>
+                  <li data-tab="main"><a>Sac à main&nbsp;(<span class="reste">0</span>)</a></li>
                 </ul>
              </div>
              <!-- end tabstitle -->
              <!-- tabscontent -->
              <!-- tabcontent 1 -->
             <div class="tabs-contents">
-                
+                <div id="cabine" class="valise-cabine tab-content" data-tabcontent="cabine">
+                    <ul class="list">
+                       <!--
+                        <li class="list-item todo columns is-active">
+                            <div class="column is-three-quarters">test</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        <li class="list-item todo columns is-active">
+                            <div class="column is-three-quarters">test 2</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        <li class="list-item todo columns is-active">
+                            <div class="column is-three-quarters">test 3</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        <li class="list-item todo columns">
+                            <div class="column is-three-quarters">test 3</div>
+                            <div class="column"><button class="button">x</button></div>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+                <!--end tabcontent 1-->
+                <!-- tabcontent 2 -->
+                <div id="soute" class="valise-soute tab-content active" data-tabcontent="soute">
+                    <ul class="list"></ul>
+                </div>
+                <!-- end tabcontent 2-->
+                <!--  tabcontent 3-->
+                <div id="main" class="sac-a-main tab-content" data-tabcontent="main">
+                    <ul class="list"></ul>
+                </div>
+                <!--end tabcontent 3-->
             </div><!--end tabs-contents-->
         </main>
         <footer class="footer hero"><p class="content has-text-centered">© P. Charlier - 2023</p></footer>

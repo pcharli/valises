@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test drop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css">
+    <style>
+        .to-drag {
+            border: 1px solid red;
+            width: 50%;
+            height: 2rem;
+            text-align: center;
+            margin: auto;
+            cursor:move;
+        }
+        .to-drag.dragged {
+            border: 1px red dashed;
+            background-color:red;
+            color:white;
+        }
+        .column {
+            border: 1px solid black;
+        }
+        .column.dropped {
+            border-color: red;
+        }
+    </style>
+    <script defer src="test-drop.js"></script>
+</head>
+<body>
+    <div class="container content">
+        <header class="hero">
+            <h1 class="title">Drag & Drop</h1>
+        </header>
+        <main class="section">
+            <div class="columns">
+                <div class="column boite" id="boite1">
+                    <div class="to-drag" draggable="true">
+                        Bloc 1
+                    </div>
+                    <div class="to-drag" draggable="true">
+                        Bloc 2
+                    </div>     
+                </div>
+                <div class="column boite" id="boite2"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
